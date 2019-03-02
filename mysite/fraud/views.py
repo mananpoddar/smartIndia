@@ -4,7 +4,8 @@ import datetime
 from django import template
 from django.utils import timezone
 from keras.models import load_model
-from fraud.models import Aadhar,Bank_formalities,Bank_details,bank_statement
+import keras.backend as tf
+from fraud.models import Aadhar,Bank_formalities,Bank_details,bank_statement,predicted_features,predictions
 from django.shortcuts import render,get_object_or_404
 from fraud.forms import Authentic
 from django.urls import reverse
@@ -18,7 +19,7 @@ from django.contrib.auth import authenticate,login,logout
 #from codefundo.models import user_details,gov_fund,track_users
 from datetime import datetime,date,timedelta
 path = os.path.join(os.path.join(os.getcwd(),'fraud'), 'data.h5')
-model = load_model(path)
+
 
 def index(request):
     return render(request,"fraud/index.html")   
@@ -61,15 +62,23 @@ def process(familyaadhar):
         input_data += [0,1,0]
     else:
         input_data += [0,0,1]
-
+    
+    model = load_model(path)
+    
     print(input_data)
     input_data = np.array( [input_data])
+    
     input_data.dtype = 'float'
+    print(type(input_data),input_data.shape)
     print(input_data)
     final_data = model.predict(input_data)
     print(final_data)
 
-
+    #save all the final data in predicted features
+    form = predicted_features()
+    # i = form.save(commit=False)
+    print(form)
+    
     #print(familyMembers) #family members of type bankformalities
 
 
