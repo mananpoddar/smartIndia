@@ -1,0 +1,37 @@
+
+<h1 style=" text-align: center"><strong style="color:aliceblue">Login Here!</strong> </h1><br>
+<form class="form-horizontal" action="{% url "fraud:user_login" %}" method="POST">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="username"><strong>Username:</strong></label>
+        <br><br>
+        <div class="col-sm-10">
+     <input type="text" class="form-control" name="username" placeholder="Enter username" >
+        </div>
+    </div>
+  
+    <div class="form-group">
+       <label class="control-label col-sm-2"  for="password"><strong>Password:</strong></label>
+       <br><br>
+     <div class="col-sm-10">
+       <input class="form-control" type="password" name="password" placeholder="Enter Password">
+   </div>
+    </div>
+    <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                        <label><input type="checkbox" name="remember"><strong style="color:aliceblue">Remember me</strong></label>
+                    </div>
+                  </div>
+                </div>
+     <div class="form-group">       
+        <div class="col-sm-offset-2 col-sm-10">
+     <input type="submit" name=""   class="btn btn-default" value="Login">
+        </div>
+     </div>
+    </div>
+    </form>
+      </div>
+        </div>
+        </div>
