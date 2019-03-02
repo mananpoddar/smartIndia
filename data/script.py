@@ -1,7 +1,7 @@
 import json
 import random
 
-no_of_points = 1000
+no_of_points = 100000
 
 def rand_range(a, b):
     return (b-a) * random.random() + a
@@ -17,7 +17,8 @@ def tax_bracket(credit):
     else:
         return (credit - 1000000) * 0.3 + 500000 * 0.2 + 250000 * 0.05
 
-
+with open('data.csv', 'a') as f:
+    f.write(','.join(['lower_education', 'higher_education', 'area', 'jewellery', 'car', 'bike', 'tax', 'misc_credit', 'misc_debit']) + '\n')
 
 with open('template-2.json', 'r') as f:
     o = json.load(f)

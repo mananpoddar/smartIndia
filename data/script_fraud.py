@@ -1,7 +1,7 @@
 import json
 import random
 
-no_of_points = 1000
+no_of_points = 100000
 
 def tax_bracket(credit):
     if credit <= 250000:
@@ -12,6 +12,10 @@ def tax_bracket(credit):
         return (credit - 500000) *  0.2 + 250000 * 0.05
     else:
         return (credit - 1000000) * 0.3 + 500000 * 0.2 + 250000 * 0.05
+
+with open('data_fraud.csv', 'a') as f:
+    f.write(','.join(['lower_education', 'higher_education', 'area', 'jewellery', 'car', 'bike', 'tax', 'misc_credit', 'misc_debit']) + '\n')
+
 
 def rand_range(a, b):
     return (b-a) * random.random() + a
