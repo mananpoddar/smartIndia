@@ -1,0 +1,13 @@
+{
+    "poor": {
+        "education": [0.05,0.10],
+        "area":["slum","middle"],
+        "jewellery":[0,10000],
+        "car":[0],
+        "bike":[0,1],
+        "tax":[0],
+        "misc_credit":[6000,10000],
+        "misc_debit":[6000,10000],
+        "desc": "typical poor peoples living in slums and working as house helpers and rickshaw pullers"
+    }
+}

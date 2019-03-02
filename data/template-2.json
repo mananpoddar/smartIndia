@@ -1,0 +1,134 @@
+{
+    "poor": {
+        "lower_education": [0.05,0.10],
+        "higher_education": [0.05,0.10],
+        "area":["slum","middle"],
+        "jewellery":[0,5000],
+        "car":[0,0],
+        "bike":[0,1],
+        "misc_credit":[0,50000],
+        "misc_debit":[0,50000],
+        "desc": "poor"
+    },
+    "poor_business": {
+        "lower_education": [0.05,0.10],
+        "higher_education": [0.05,0.10],
+        "area":["slum","middle"],
+        "jewellery":[0,5000],
+        "car":[0,0],
+        "bike":[0,1],
+        "misc_credit":[0,60000],
+        "misc_debit":[0,60000],
+        "desc": "poor_business"
+    },
+    "lower_middle": {
+        "lower_education": [0.05,0.10],
+        "higher_education": [0.10,0.15],
+        "area":["middle"],
+        "jewellery":[0,10000],
+        "car":[0,1],
+        "bike":[0,1],
+        "misc_credit":[50000,450000],
+        "misc_debit":[50000,450000],
+        "desc": "lower_middle"
+    },
+    "lower_middle_business": {
+        "lower_education": [0.05,0.10],
+        "higher_education": [0.10,0.15],
+        "area":["middle"],
+        "jewellery":[0,10000],
+        "car":[0,1],
+        "bike":[0,1],
+        "misc_credit":[50000,600000],
+        "misc_debit":[50000,600000],
+        "desc": "lower_middle_business"
+    },
+    "middle": {
+        "lower_education": [0.10,0.15],
+        "higher_education": [0.15,0.20],
+        "area":["middle"],
+        "jewellery":[0,50000],
+        "car":[0,2],
+        "bike":[0,2],
+        "misc_credit":[450000,1200000],
+        "misc_debit":[450000,1200000],
+        "desc": "middle"
+    },
+    "middle_business": {
+        "lower_education": [0.10,0.15],
+        "higher_education": [0.15,0.20],
+        "area":["middle","posh"],
+        "jewellery":[0,50000],
+        "car":[0,2],
+        "bike":[0,2],
+        "misc_credit":[450000,2000000],
+        "misc_debit":[450000,2000000],
+        "desc": "middle_business"
+    },
+    "upper_middle": {
+        "lower_education": [0.15,0.20],
+        "higher_education": [0.20,0.25],
+        "area":["posh","middle"],
+        "jewellery":[0,100000],
+        "car":[1,3],
+        "bike":[0,2],
+        "misc_credit":[1200000,2400000],
+        "misc_debit":[1200000,2400000],
+        "desc": "upper_middle"
+    },
+    "upper_middle_business": {
+        "lower_education": [0.15,0.20],
+        "higher_education": [0.20,0.25],
+        "area":["posh","middle"],
+        "jewellery":[0,100000],
+        "car":[1,3],
+        "bike":[0,2],
+        "misc_credit":[1200000,3000000],
+        "misc_debit":[1200000,3000000],
+        "desc": "upper_middle_business"
+    },
+    "rich": {
+        "lower_education": [0.15,0.20],
+        "higher_education": [0.20,0.25],
+        "area":["posh"],
+        "jewellery":[0,500000],
+        "car":[1,5],
+        "bike":[0,3],
+        "misc_credit":[2400000,5000000],
+        "misc_debit":[2400000,5000000],
+        "desc": "rich"
+    },
+    "rich_business": {
+        "lower_education": [0.15,0.20],
+        "higher_education": [0.20,0.25],
+        "area":["posh"],
+        "jewellery":[0,500000],
+        "car":[1,5],
+        "bike":[0,3],
+        "misc_credit":[2400000,7500000],
+        "misc_debit":[2400000,7500000],
+        "desc": "rich_business"
+    },
+    "elite": {
+        "lower_education": [0.13,0.17],
+        "higher_education": [0.17,0.23],
+        "area":["posh"],
+        "jewellery":[0,1000000],
+        "car":[1,10],
+        "bike":[0,5],
+        "misc_credit":[5000000,100000000],
+        "misc_debit":[5000000,100000000],
+        "desc": "elite"
+    },
+    "elite_business": {
+        "lower_education": [0.13,0.17],
+        "higher_education": [0.17,0.23],
+        "area":["posh"],
+        "jewellery":[0,5000000],
+        "car":[1,10],
+        "bike":[0,5],
+        "misc_credit":[5000000,200000000],
+        "misc_debit":[5000000,200000000],
+        "desc": "elite_business"
+    }
+}
