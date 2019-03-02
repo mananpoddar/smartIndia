@@ -1,0 +1,23 @@
+{% extends 'base_temp.html' %}
+
+{% block one %}
+<form id="report_form" method="post" action="" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {% for hidden in reportForm.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+
+    {% for field in reportForm %}
+        {{ field }} <br />
+    {% endfor %}
+
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form }}
+    {% endfor %}
+
+
+    <input type="submit" name="submit" value="Submit" />
+</form>
+{% endblock %}

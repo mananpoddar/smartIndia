@@ -1,0 +1,12 @@
+{% extends 'base_temp.html' %}
+
+{% block one %}
+    <div class="enter_image">
+        <h1 id="detailhead">Upload the picture:</h1>
+        <form style="color:black" class="enter_holiday_form" action="{% url 'holidays:enter' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Process Image">
+        </form>
+    </div>
+{% endblock %}

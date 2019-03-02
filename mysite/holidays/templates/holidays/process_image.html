@@ -1,0 +1,17 @@
+{% extends 'base_temp.html' %}
+
+{% block one %}
+{% if images %}<center>
+	<h1 id="detailhead">Image List</h1>
+    <div class="row" style="align-self:center;width: 100%">
+		{% for image in images %}
+		<div class="col-lg-4" style="color:rgb(0, 0, 0); background-color:rgb(255, 255, 255)">
+			<img src="{{ image.thumb.url }}" style="max-width:25vh; max-height: 20vh">
+			<h4>Name: {{ image.pk }}<br>
+			</h4>
+        {% endfor %}
+    </div></center>
+	{% else %}
+	<h3>No data present</h3>
+    {% endif %}
+{% endblock %}

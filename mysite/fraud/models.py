@@ -12,11 +12,9 @@ class Bank_formalities(models.Model):
     ac_no   =   models.IntegerField(default=0,unique=True)
     aadhar_no = models.IntegerField(default=0, unique=True)
 
-
 class tracked(models.Model):
     aadhar_no = models.IntegerField(default=0, unique=True)
     address   = models.TextField(max_length=100,default=None)
-
 
 class bank_statement(models.Model):
     aadhar_no        =       models.IntegerField(default=0,unique=True)
@@ -30,13 +28,12 @@ class bank_statement(models.Model):
     credit          =       models.IntegerField(default=0)
     debit           =       models.IntegerField(default=0)
 
-
 class Bank_details(models.Model):
     ac_no   =   models.IntegerField(default=0,unique=True)
     bank_statement  =   models.ForeignKey(bank_statement,on_delete=models.CASCADE)
 
 class predicted_features(models.Model):
-    aadhar_no        =       models.IntegerField(default=0,unique=True)
+    aadhar_no        =      models.IntegerField(default=0,unique=True)
     lEdu            =       models.IntegerField(default=0)
     hEdu            =       models.IntegerField(default=0)
     area            =       models.CharField(default=0,max_length=100)
@@ -49,5 +46,5 @@ class predicted_features(models.Model):
 
 class predictions(models.Model):
     aadhar_no        =       models.IntegerField(default=0,unique=True)
-    predicted_features = models.ForeignKey(predicted_features,on_delete="models.CASCADE")
+    predicted_features =    models.ForeignKey(predicted_features, on_delete=models.CASCADE)
     fraud           =       models.BooleanField(default=0)
