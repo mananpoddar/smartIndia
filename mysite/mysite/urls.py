@@ -10,7 +10,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^fraud/', include("fraud.urls" , namespace="fraud")),#managefraudroute
     url(r'^holidays/', include("holidays.urls" , namespace="holidays")), #for using holiday images
-    url(r'^report/', include("report.urls" , namespace="report")), #for using holiday images
 ]
 
 urlpatterns += staticfiles_urlpatterns()

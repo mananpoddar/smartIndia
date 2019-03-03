@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'fraud.apps.FraudConfig',
     'widget_tweaks',
     'holidays.apps.HolidaysConfig',
-    'report.apps.ReportConfig',
 ]
 
 MIDDLEWARE = [

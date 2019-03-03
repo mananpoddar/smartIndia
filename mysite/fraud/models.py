@@ -45,6 +45,6 @@ class predicted_features(models.Model):
     debit           =       models.IntegerField(default=0)
 
 class predictions(models.Model):
-    aadhar_no        =       models.IntegerField(default=0,unique=True)
+    aadhar_no        =      models.IntegerField(default=0,unique=True)
     predicted_features =    models.ForeignKey(predicted_features, on_delete=models.CASCADE)
     fraud           =       models.BooleanField(default=0)
