@@ -1,0 +1,26 @@
+.title{
+	margin-top: 5px;
+	font-family: 'Arvo', serif;
+    font-size: 75px;
+    text-align: center;
+}
+
+.line{
+	font-family: 'Tangerine', cursive;
+	font-size: 40px;
+}
+
+.text{
+    font-family: 'Arvo', serif;
+    font-size: 5px;
+}
+
+.login{
+    font-family: 'Arvo', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+li{
+    list-style-type: square;
+}

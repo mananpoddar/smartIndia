@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block one %}
+
+<p style="text-align: center;">
+<strong><u>AADHAR NUMBER</u></strong>     <strong><u>FRAUD?</u></strong>  
+<ul style="text-align: center;">
+{% for predictions in predict %}<br>
+<li>
+ <a href="/fraud/{{predictions.aadhar_no}}">  {{predictions.aadhar_no}} </a>
+   {{predictions.fraud}}<br><br>
+</li>
+   {% endfor %} 
+</ul>
+</p>
+   {% endblock %}

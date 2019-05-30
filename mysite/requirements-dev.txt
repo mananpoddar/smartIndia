@@ -1,0 +1,6 @@
+django==2.1.7
+keras
+tensorflow
+torch
+torchvision
+django-widget-tweaks

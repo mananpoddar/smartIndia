@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block one %}
+<br>
+<div id="contact">
+   <div class="w3-modal-content w3-animate-zoom">
+     <div class="w3-container w3-black">
+         <h1>Official Login</h1>
+      </div>
+      <div class="w3-container">
+        <p>Enter your username and password:</p>
+         <form class="form-horizontal" action="{% url 'fraud:user_login' %}" method="POST">
+         {% csrf_token %}
+         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="password" placeholder="Password"></p>
+      <p><button class="w3-button" style="border:black 1px solid;" type="submit">LogIn</button></p>
+   </form>   
+   </div>
+     </div>
+    </div>
+{% endblock %}

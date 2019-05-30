@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block one %}
+
+<div id="contact">
+        <div class="w3-modal-content w3-animate-zoom">
+          <div class="w3-container w3-black">
+              <h1>Welcome Officer</h1>
+           </div>
+           <div class="w3-container">
+            <p>Choose your option:</p>
+
+
+<a href="{% url "fraud:new_case" %}"><p><input class="w3-input w3-padding-16 w3-border" type="button" value="OPEN NEW CASE"></p></a>
+<a href="{% url "fraud:generate_list" %}"><p><input class="w3-input w3-padding-16 w3-border" type="button" value="GENERATE LIST"></p></a>
+</div>
+{% endblock %}

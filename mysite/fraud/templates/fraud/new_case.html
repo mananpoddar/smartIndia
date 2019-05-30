@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block one %}
+<br>
+
+<div id="contact">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+          <h1>Generate New Case</h1>
+      </div>
+      <div class="w3-container">
+      <form class="form-horizontal" action="{% url "fraud:new_case" %}" method="POST">
+      {% csrf_token %}
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Enter Aadhar Number"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount spent on lower education"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount spent on lower education"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Cost of living according to locality"></p> 
+     <datalist id="hosting-plan">
+        <option value="slums">slums</option>
+        <option value="middle">middle</option>
+        <option value="posh">posh</option>
+    </datalist>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount spent on jewelery"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Number of cars"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Number of bikes"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Enter tax paid"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Enter miscellaneous credit details"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Enter miscellaneous debit details"></p>
+    <p><button class="w3-button" style="border:black 1px solid;" type="submit">Submit Details</button></p>    </form>
+      </div>
+        </div>
+        </div>
+{% endblock %}
